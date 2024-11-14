@@ -40,7 +40,7 @@ public abstract class Sandwich implements OrderPrice {
         System.out.println("White, Wheat, Rye or a Wrap");
         String breadType = scanner.nextLine();
         System.out.println("Which size would you like?");
-        System.out.println("We have 4\", 8\" or 12\".");
+        System.out.println("We have 4\", 8\" or 12\"");
 
     }
 }
