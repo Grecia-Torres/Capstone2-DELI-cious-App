@@ -1,11 +1,15 @@
 package com.pluralsight.capstone2;
 
+import OtherProducts.Chips;
+import OtherProducts.OtherProductsDisplayed;
+
 import java.util.Scanner;
 
 public class OrderScreen {
     public static void orderScreen() {
         Scanner scanner = new Scanner(System.in);
-        while (true) {
+        boolean running = true;
+        while (running) {
             try {
                 System.out.println("---------Order Screen---------");
                 System.out.println("If you are ready to order please choose one of the options below:");
@@ -16,6 +20,7 @@ public class OrderScreen {
                 System.out.println("0) Cancel Order");
 
                 int options = scanner.nextInt();
+                scanner.nextLine();
 
                 switch (options) {
                     case 1:
@@ -25,9 +30,15 @@ public class OrderScreen {
                         break;
                     case 2:
                         System.out.println("Add Drink");
+                        OtherProductsDisplayed otherProductsDisplayed1 = new OtherProductsDisplayed();
+                        otherProductsDisplayed1.drinkDisplayed(scanner);
                         break;
                     case 3:
                         System.out.println("Add Chips");
+                        OtherProductsDisplayed otherProductsDisplayed = new OtherProductsDisplayed();
+                        otherProductsDisplayed.chipsDisplayed();
+
+
                         break;
                     case 4:
                         System.out.println("Checkout");

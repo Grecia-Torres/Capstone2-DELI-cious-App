@@ -15,7 +15,7 @@ abstract class Meats implements Toppings, OrderPrice {
     }
 
     @Override
-    public double price() {
+    public double getPrice() {
         double addedCharge;
 
         switch (size) {

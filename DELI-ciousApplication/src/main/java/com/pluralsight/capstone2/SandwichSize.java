@@ -10,7 +10,7 @@ public abstract class SandwichSize implements OrderPrice {
     }
 
     @Override
-    public double price() {
+    public double getPrice() {
         double totalPrice;
 
         switch (size) {
@@ -35,6 +35,10 @@ public abstract class SandwichSize implements OrderPrice {
 
     }
 
+    @Override
+    public void setPrice(double price) {
+}
+
     public static SandwichMaker sandwichSizeChoice() {
         Scanner scanner = new Scanner(System.in);
         SandwichMaker.sandwichSizes();
@@ -46,10 +50,14 @@ public abstract class SandwichSize implements OrderPrice {
 
             System.out.println("Select sandwich size");
             int sizeChoice = scanner.nextInt();
+            scanner.nextLine();
 
 
             if (sizeChoice == 4 || sizeChoice == 8 || sizeChoice == 12) {
-                sandwich = new SandwichMaker(sizeChoice);
+                System.out.println("Which type of bread would you like?");
+                System.out.println("We have White, Wheat, Rye or a Wrap");
+                String breadType = scanner.nextLine();
+                sandwich = new SandwichMaker(sizeChoice, breadType);
                 availableSizes = true;
             } else {
 
