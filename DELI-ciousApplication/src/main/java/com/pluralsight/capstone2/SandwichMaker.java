@@ -2,7 +2,7 @@ package com.pluralsight.capstone2;
 
 import java.util.Scanner;
 
-public class SandwichMaker extends Sandwich {
+public class SandwichMaker extends SandwichSize {
     public SandwichMaker(int size) {
         super(size);
     }
@@ -13,30 +13,14 @@ public class SandwichMaker extends Sandwich {
 
     }
 
-    public static SandwichMaker sandwichSizeChoice() {
+    public static void sandwichSizes() {
         Scanner scanner = new Scanner(System.in);
-        Sandwich.sandwichSizes();
+        System.out.println("Which type of bread would you like from the following:");
+        System.out.println("White, Wheat, Rye or a Wrap");
+        String breadType = scanner.nextLine();
+        System.out.println("Which size would you like?");
+        System.out.println("We have 4\", 8\" or 12\"");
 
-        SandwichMaker sandwich = null;
-
-        boolean availableSizes = false;
-        while (!availableSizes) {
-
-            System.out.println("Select sandwich size");
-            int sizeChoice = scanner.nextInt();
-
-
-            if (sizeChoice == 4 || sizeChoice == 8 || sizeChoice == 12) {
-                sandwich = new SandwichMaker(sizeChoice);
-                availableSizes = true;
-            } else {
-
-                System.out.println("Not a sandwich size choice!");
-            }
-        }
-
-        return sandwich;
     }
-
 }
 
