@@ -22,5 +22,8 @@ public class SandwichMaker extends SandwichSize {
         System.out.println("We have 4\", 8\" or 12\"");
 
     }
+    /*public void meatDisplay() {
+        System.out.println("The price of a " + getType() + "\" sandwich is $" + String.format("%.2f", price())); */
+ //   }
 }
 
