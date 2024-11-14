@@ -20,6 +20,8 @@ public class OrderScreen {
                 switch (options) {
                     case 1:
                         System.out.println("Add Sandwich");
+                        SandwichMaker sandwich = SandwichMaker.sandwichSizeChoice();
+                        sandwich.sandwichSizesDisplay();
                         break;
                     case 2:
                         System.out.println("Add Drink");
