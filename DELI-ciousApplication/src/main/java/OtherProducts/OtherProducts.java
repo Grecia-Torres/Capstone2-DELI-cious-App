@@ -1,6 +1,6 @@
 package OtherProducts;
 
-import com.pluralsight.capstone2.OrderPrice;
+import Ordering.OrderPrice;
 
 public class OtherProducts implements OrderPrice {
     private String name;

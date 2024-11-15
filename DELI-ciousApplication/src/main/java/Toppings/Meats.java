@@ -1,16 +1,34 @@
 package Toppings;
 
+import CompleteSandwich.SandwichSize;
+
+
 public class Meats extends Toppings {
-    public Meats(String name, double price) {
-        super(name, price);
+    private SandwichSize sandwichSize;
+    private boolean extraCharge;
+
+    public Meats(String name, SandwichSize sandwichSize, boolean extraCharge) {
+        super(name, 0.00);
+        this.sandwichSize = sandwichSize;
+        this.extraCharge = extraCharge;
     }
 
     @Override
     public double getPrice() {
-        return super.getPrice();
+
+        double meatPrice = super.getPrice();
+
+
+        double sizePrice = sandwichSize.getPrice();
+
+
+        double extraMeatCharge = extraCharge ? extraMeatCharge() : 0;
+
+
+        return meatPrice + sizePrice + extraMeatCharge;
     }
-    public double getPrice(int size) {
-        // Custom logic for pricing meat based on size
+    private double getSizePrice() {
+        int size = sandwichSize.getSize();
         switch (size) {
             case 4:
                 return 1.00;
@@ -19,8 +37,31 @@ public class Meats extends Toppings {
             case 12:
                 return 3.00;
             default:
-                throw new IllegalArgumentException("Invalid size for meat");
+                throw new IllegalArgumentException("Invalid sandwich size for meat price: " + size);
         }
     }
-}
 
+
+    private double extraMeatCharge() {
+        int size = sandwichSize.getSize();
+
+        switch (size) {
+            case 4:
+                return 0.50;
+            case 8:
+                return 1.00;
+            case 12:
+                return 1.50;
+            default:
+                throw new IllegalArgumentException("Invalid size for extra meat charge");
+        }
+    }
+
+    public String getType() {
+        return getName();
+    }
+
+    public SandwichSize getSandwichSize() {
+        return sandwichSize;
+    }
+}

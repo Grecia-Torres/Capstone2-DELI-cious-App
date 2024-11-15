@@ -1,8 +1,7 @@
 package CompleteSandwich;
 
-import com.pluralsight.capstone2.OrderPrice;
+import Ordering.OrderPrice;
 
-import java.util.Scanner;
 
 public abstract class SandwichSize implements OrderPrice {
     private int size;
@@ -39,35 +38,6 @@ public abstract class SandwichSize implements OrderPrice {
 
     @Override
     public void setPrice(double price) {
-}
-
-    public static SandwichMaker sandwichSizeChoice() {
-        Scanner scanner = new Scanner(System.in);
-        SandwichMaker.sandwichSizes();
-
-        SandwichMaker sandwich = null;
-
-        boolean availableSizes = false;
-        while (!availableSizes) {
-
-            System.out.println("Select sandwich size");
-            int sizeChoice = scanner.nextInt();
-            scanner.nextLine();
-
-
-            if (sizeChoice == 4 || sizeChoice == 8 || sizeChoice == 12) {
-                System.out.println("Which type of bread would you like?");
-                System.out.println("We have White, Wheat, Rye or a Wrap");
-                String breadType = scanner.nextLine();
-                sandwich = new SandwichMaker(sizeChoice, breadType);
-                availableSizes = true;
-            } else {
-
-                System.out.println("Not a sandwich size choice!");
-            }
-        }
-
-        return sandwich;
-
     }
 }
+

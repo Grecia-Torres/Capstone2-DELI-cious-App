@@ -1,0 +1,8 @@
+Order Receipt
+Date: 2024-11-15 02:58:21
+
+Order Details:
+Sandwich: 4" with rye bread - $5.50
+Meat: 6.0
+
+Total Price: $11.50

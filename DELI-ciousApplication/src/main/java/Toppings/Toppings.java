@@ -1,6 +1,6 @@
 package Toppings;
 
-import com.pluralsight.capstone2.OrderPrice;
+import Ordering.OrderPrice;
 
 public class Toppings implements OrderPrice {
     String name;
@@ -10,6 +10,7 @@ public class Toppings implements OrderPrice {
         this.name = name;
         this.price = price;
     }
+
     public String getName() {
         return name;
 
@@ -19,6 +20,7 @@ public class Toppings implements OrderPrice {
     public double getPrice() {
         return price;
     }
+
     @Override
     public void setPrice(double price) {
         this.price = price;

@@ -1,0 +1,11 @@
+Order Receipt
+Date: 2024-11-15 03:43:07
+
+Order Details:
+Sandwich: 4" with rye bread - $5.50
+Meat: ham - $6.00
+Cheese: cheddar
+Regular Toppings: Pickles
+Sauces: Ranch
+
+Total Price: $11.50

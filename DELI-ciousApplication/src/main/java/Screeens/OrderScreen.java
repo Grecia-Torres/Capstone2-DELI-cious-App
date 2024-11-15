@@ -1,13 +1,17 @@
 package Screeens;
 
-import CompleteSandwich.SandwichMaker;
-import OtherProducts.OtherProductsDisplayed;
+import Ordering.Order;
 
 import java.util.Scanner;
 
 public class OrderScreen {
+
+
+    private static Scanner scanner = new Scanner(System.in);
+
+
     public static void orderScreen() {
-        Scanner scanner = new Scanner(System.in);
+        Order order = new Order();
         boolean running = true;
         while (running) {
             try {
@@ -19,33 +23,32 @@ public class OrderScreen {
                 System.out.println("4) Checkout");
                 System.out.println("0) Cancel Order");
 
-                int options = scanner.nextInt();
+                int option = scanner.nextInt();
                 scanner.nextLine();
 
-                switch (options) {
+
+                switch (option) {
                     case 1:
                         System.out.println("Add Sandwich");
-                        SandwichMaker sandwich = SandwichMaker.sandwichSizeChoice();
-                        sandwich.sandwichSizesDisplay();
+                        order.addSandwich(scanner);
                         break;
                     case 2:
                         System.out.println("Add Drink");
-                        OtherProductsDisplayed otherProductsDisplayed1 = new OtherProductsDisplayed();
-                        otherProductsDisplayed1.drinkDisplayed(scanner);
+                        order.addDrink(scanner);
                         break;
                     case 3:
                         System.out.println("Add Chips");
-                        OtherProductsDisplayed otherProductsDisplayed = new OtherProductsDisplayed();
-                        otherProductsDisplayed.chipsDisplayed();
-
-
+                        order.addChips(scanner);
                         break;
                     case 4:
                         System.out.println("Checkout");
+                        order.checkout();
                         break;
                     case 0:
                         System.out.println("Cancel Order");
                         HomeScreen.homeScreen();
+                        running = false;
+                        break;
                     default:
                         System.out.println("Not a valid option. Please choose one of the following options:");
                         break;

@@ -1,4 +1,4 @@
-package com.pluralsight.capstone2;
+package Ordering;
 
 public interface OrderPrice {
     double getPrice();

@@ -5,7 +5,7 @@ public class Drink extends OtherProducts {
     private String type;
 
     public Drink(String type, String size) {
-        super("Drink!", 0);
+        super("Drink!",0);
         this.size = size;
         this.type = type.toLowerCase().trim();
         drinkPrices(size);

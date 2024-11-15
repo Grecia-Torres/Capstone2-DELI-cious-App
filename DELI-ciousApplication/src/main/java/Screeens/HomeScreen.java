@@ -18,7 +18,7 @@ public class HomeScreen {
                         OrderScreen.orderScreen();
                         break;
                     case 0:
-                        System.out.println("Exiting Now.");
+                        System.out.println("Exiting Now...");
                         scanner.close();
                         return;
                     default:
