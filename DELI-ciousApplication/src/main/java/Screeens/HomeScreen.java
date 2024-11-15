@@ -15,7 +15,7 @@ public class HomeScreen {
 
                 switch (options) {
                     case 1:
-                        OrderScreen.orderScreen();
+                        OrderScreen.orderScreen(scanner);
                         break;
                     case 0:
                         System.out.println("Exiting Now...");

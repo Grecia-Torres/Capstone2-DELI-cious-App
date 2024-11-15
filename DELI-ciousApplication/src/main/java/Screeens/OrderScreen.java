@@ -10,7 +10,7 @@ public class OrderScreen {
     private static Scanner scanner = new Scanner(System.in);
 
 
-    public static void orderScreen() {
+    public static void orderScreen(Scanner scanner) {
         Order order = new Order();
         boolean running = true;
         while (running) {
@@ -45,8 +45,8 @@ public class OrderScreen {
                         order.checkout();
                         break;
                     case 0:
-                        System.out.println("Cancel Order");
-                        HomeScreen.homeScreen();
+                        System.out.println("Canceling your order....");
+                       // HomeScreen.homeScreen();
                         running = false;
                         break;
                     default:
