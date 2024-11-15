@@ -43,6 +43,8 @@ public class OrderScreen {
                     case 4:
                         System.out.println("Checkout");
                         order.checkout();
+                        HomeScreen.homeScreen();
+                        running = false;
                         break;
                     case 0:
                         System.out.println("Canceling your order....");
