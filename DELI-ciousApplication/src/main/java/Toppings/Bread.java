@@ -1,6 +1,6 @@
 package Toppings;
 
-import com.pluralsight.capstone2.SandwichSize;
+import CompleteSandwich.SandwichSize;
 
 abstract class Bread extends SandwichSize {
     private String breadType;

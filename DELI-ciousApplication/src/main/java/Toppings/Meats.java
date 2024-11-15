@@ -1,37 +1,26 @@
 package Toppings;
 
-import com.pluralsight.capstone2.OrderPrice;
-
-abstract class Meats implements Toppings, OrderPrice {
-    private String type;
-    private int size;
-
-    public Meats(String type) {
-        this.type = type;
-    }
-
-    public String getType() {
-        return type;
+public class Meats extends Toppings {
+    public Meats(String name, double price) {
+        super(name, price);
     }
 
     @Override
     public double getPrice() {
-        double addedCharge;
-
+        return super.getPrice();
+    }
+    public double getPrice(int size) {
+        // Custom logic for pricing meat based on size
         switch (size) {
             case 4:
-                addedCharge = 1.00;
-                break;
+                return 1.00;
             case 8:
-                addedCharge = 2.00;
-                break;
+                return 2.00;
             case 12:
-                addedCharge = 3.00;
-                break;
+                return 3.00;
             default:
-                addedCharge = 3.50;
-                break;
+                throw new IllegalArgumentException("Invalid size for meat");
         }
-        return addedCharge;
     }
 }
+

@@ -1,6 +1,4 @@
-package com.pluralsight.capstone2;
-
-import java.util.Scanner;
+package CompleteSandwich;
 
 public class SandwichMaker extends SandwichSize {
     private String breadType;
@@ -25,8 +23,9 @@ public class SandwichMaker extends SandwichSize {
         System.out.println("We have 4\", 8\" or 12\"");
 
     }
-    /*public void meatDisplay() {
-        System.out.println("The price of a " + getType() + "\" sandwich is $" + String.format("%.2f", price())); */
- //   }
+    public static void meatDisplay() {
+        System.out.println("Would you like to add any meat?");
+        //System.out.println("The price of a " + getType() + "\" sandwich is $" + String.format("%.2f", price())); */
+    }
 }
 

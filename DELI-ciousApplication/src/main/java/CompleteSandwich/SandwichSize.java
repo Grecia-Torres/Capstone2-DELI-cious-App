@@ -1,4 +1,6 @@
-package com.pluralsight.capstone2;
+package CompleteSandwich;
+
+import com.pluralsight.capstone2.OrderPrice;
 
 import java.util.Scanner;
 

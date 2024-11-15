@@ -1,6 +1,6 @@
-package com.pluralsight.capstone2;
+package Screeens;
 
-import OtherProducts.Chips;
+import CompleteSandwich.SandwichMaker;
 import OtherProducts.OtherProductsDisplayed;
 
 import java.util.Scanner;

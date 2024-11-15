@@ -1,14 +1,15 @@
 package Toppings;
 /*
-public class Cheeses extends /*Toppings {
-    @Override
-    public void bread() {
-
+public class Cheeses extends Toppings {
+    public Cheeses(String name, double price) {
+        super(name, price);
     }
 
     @Override
-    void addToppings() {
-
+    public double getPrice(int size) {
+        // Custom logic for pricing cheese based on size
+        return price;  // Default behavior (could be adjusted based on size)
     }
+}
 }
 */

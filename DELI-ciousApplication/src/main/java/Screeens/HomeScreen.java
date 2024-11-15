@@ -1,4 +1,4 @@
-package com.pluralsight.capstone2;
+package Screeens;
 
 import java.util.Scanner;
 
