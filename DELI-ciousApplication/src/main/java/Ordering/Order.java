@@ -132,7 +132,7 @@ public class Order {
             writer.write("\nTotal Price: $" + String.format("%.2f", totalPrice) + "\n");
             System.out.println("Receipt saved to " + receiptFile.getPath());
         } catch (IOException e) {
-            System.err.println("Error saving receipt: " + e.getMessage());
+            System.err.println("We apologize there was an error saving receipt " + e.getMessage());
         }
     }
 }

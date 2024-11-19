@@ -13,6 +13,8 @@ public class HomeScreen {
                 System.out.println("Press 0 if you would like to exit the app");
                 int options = scanner.nextInt();
 
+                scanner.nextLine();
+
                 switch (options) {
                     case 1:
                         OrderScreen.orderScreen(scanner);

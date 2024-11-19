@@ -32,7 +32,7 @@ public class Cheeses extends Toppings {
             case 12:
                 return 2.25;
             default:
-                throw new IllegalArgumentException("Invalid sandwich size for meat price: " + size);
+                throw new IllegalArgumentException("Not Valid" + size);
         }
     }
 
@@ -47,7 +47,7 @@ public class Cheeses extends Toppings {
             case 12:
                 return 0.90;
             default:
-                throw new IllegalArgumentException("Invalid size for extra meat charge");
+                throw new IllegalArgumentException("Not valid");
         }
     }
 

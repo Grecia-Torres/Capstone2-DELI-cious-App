@@ -54,17 +54,17 @@ public class ToppingsDisplayed {
             System.out.println("Price: $" + String.format("%.2f", cheeses.getPrice()));
 
 
-            System.out.println("\nNow, let's add regular toppings to your sandwich (Included):");
+            System.out.println("\nWould you like to add regular toppings to your sandwich they are included free of charge):");
             RegularToppings selectedTopping = RegularToppings.selectTopping(scanner); // Select a topping
             selectedRegularToppings.add(selectedTopping.getName());
-            System.out.println("You have selected: " + selectedTopping.getName() + " (Included)");
+            System.out.println("You have selected: " + selectedTopping.getName() + " (included)");
 
 
-            System.out.println("\nNow, let's add sauces to your sandwich (Included):");
+            System.out.println("\nWould you like to add sauces to your sandwich they are included free of charge):");
             selectedSauces = Sauces.selectSauces(scanner);
 
         } catch (Exception e) {
-            System.out.println("An error occurred while processing your order: " + e.getMessage());
+            System.out.println("We apologize there is an issue with your order: " + e.getMessage());
             e.printStackTrace();
         }
         return meatPrice;

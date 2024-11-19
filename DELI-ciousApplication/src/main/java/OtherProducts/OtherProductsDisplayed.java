@@ -11,14 +11,14 @@ public class OtherProductsDisplayed {
             System.out.println("What kind of chips would you like?");
             String inputChipType = scanner.nextLine();
 
-            Chips chip = new Chips(inputChipType);
+            Chips chip = new Chips();
             System.out.println("You have added " + chip.getName());
             System.out.println("Price: $ " + String.format("%.2f", chip.getPrice()));
-            System.out.println("Chip type: " + chip.getChipType());
+            System.out.println("Chip type: " + String.format("%.2f", chip.getPrice()));
 
             return chip.getPrice();
         } catch (Exception e) {
-            throw new RuntimeException("Error displaying chips: " + e.getMessage());
+            throw new RuntimeException("Not a valid entry!" + e.getMessage());
         }
     }
 
@@ -40,7 +40,7 @@ public class OtherProductsDisplayed {
 
             return drink.getPrice();
         } catch (Exception e) {
-            throw new RuntimeException("Error displaying drink: " + e.getMessage());
+            throw new RuntimeException("Not a valid entry!" + e.getMessage());
         }
     }
 }

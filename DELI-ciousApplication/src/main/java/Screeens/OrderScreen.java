@@ -48,7 +48,6 @@ public class OrderScreen {
                         break;
                     case 0:
                         System.out.println("Canceling your order....");
-                       // HomeScreen.homeScreen();
                         running = false;
                         break;
                     default:

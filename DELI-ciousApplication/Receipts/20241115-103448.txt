@@ -1,0 +1,11 @@
+Order Receipt
+Date: 2024-11-15 10:34:48
+
+Order Details:
+Sandwich: 4" with rye bread - $5.50
+Meat: ham - $6.00
+Cheese: cheddar
+Regular Toppings: Lettuce
+Sauces: Mayo
+
+Total Price: $11.50
